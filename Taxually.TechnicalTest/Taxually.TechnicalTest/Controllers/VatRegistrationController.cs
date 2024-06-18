@@ -11,7 +11,6 @@
             this.companyVatRegistrationService = companyVatRegistrationService;
         }
 
-
         /// <summary>
         /// Registers a company for a VAT number in a given country
         /// </summary>
