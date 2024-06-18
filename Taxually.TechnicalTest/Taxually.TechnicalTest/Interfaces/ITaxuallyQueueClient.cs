@@ -1,7 +1,6 @@
-﻿namespace Taxually.TechnicalTest.Interfaces
+﻿namespace Taxually.TechnicalTest.Interfaces;
+
+public interface ITaxuallyQueueClient
 {
-    public interface ITaxuallyQueueClient
-    {
-        Task EnqueueAsync<TPayload>(string queueName, TPayload payload);
-    }
+    Task EnqueueAsync<TPayload>(string queueName, TPayload payload);
 }

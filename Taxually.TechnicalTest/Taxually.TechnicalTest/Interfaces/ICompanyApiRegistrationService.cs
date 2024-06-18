@@ -1,5 +1,4 @@
-﻿namespace Taxually.TechnicalTest.Interfaces
-{
-    public interface ICompanyApiRegistrationService : IBaseCompanyRegistrationService
-    { }
-}
+﻿namespace Taxually.TechnicalTest.Interfaces;
+
+public interface ICompanyApiRegistrationService : IBaseCompanyRegistrationService
+{ }

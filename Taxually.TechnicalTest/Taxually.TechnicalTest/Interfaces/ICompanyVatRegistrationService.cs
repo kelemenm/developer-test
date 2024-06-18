@@ -1,9 +1,6 @@
-﻿using Taxually.TechnicalTest.Controllers;
+﻿namespace Taxually.TechnicalTest.Interfaces;
 
-namespace Taxually.TechnicalTest.Interfaces
+public interface ICompanyVatRegistrationService
 {
-    public interface ICompanyVatRegistrationService
-    {
-        Task RegisterCompanyVatNumber(VatRegistrationRequest request);
-    }
+    Task RegisterCompanyVatNumber(VatRegistrationRequest request);
 }

@@ -1,7 +1,6 @@
-﻿namespace Taxually.TechnicalTest.Interfaces
+﻿namespace Taxually.TechnicalTest.Interfaces;
+
+public interface ITaxuallyHttpClient
 {
-    public interface ITaxuallyHttpClient
-    {
-        Task PostAsync<TRequest>(string url, TRequest request);
-    }
+    Task PostAsync<TRequest>(string url, TRequest request);
 }

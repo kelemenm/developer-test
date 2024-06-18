@@ -1,7 +1,6 @@
-﻿namespace Taxually.TechnicalTest.Interfaces
+﻿namespace Taxually.TechnicalTest.Interfaces;
+
+public interface IBaseCompanyRegistrationService
 {
-    public interface IBaseCompanyRegistrationService
-    {
-        Task RegisterCompany(VatRegistrationRequest request);
-    }
+    Task RegisterCompany(VatRegistrationRequest request);
 }

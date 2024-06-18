@@ -1,23 +1,22 @@
-﻿namespace Taxually.TechnicalTest.Services
+﻿namespace Taxually.TechnicalTest.Services;
+
+public class CompanyApiRegistrationService : ICompanyApiRegistrationService
 {
-    public class CompanyApiRegistrationService : ICompanyApiRegistrationService
+    private readonly string UkUrl;
+
+    private readonly ITaxuallyHttpClient taxuallyHttpClient;
+
+    public CompanyApiRegistrationService(
+        IConfiguration configuration,
+        ITaxuallyHttpClient taxuallyHttpClient)
     {
-        private readonly string UkUrl;
+        this.taxuallyHttpClient = taxuallyHttpClient;
 
-        private readonly ITaxuallyHttpClient taxuallyHttpClient;
+        this.UkUrl = configuration.GetValue<string>("UkUrl");
+    }
 
-        public CompanyApiRegistrationService(
-            IConfiguration configuration,
-            ITaxuallyHttpClient taxuallyHttpClient)
-        {
-            this.taxuallyHttpClient = taxuallyHttpClient;
-
-            this.UkUrl = configuration.GetValue<string>("UkUrl");
-        }
-
-        public async Task RegisterCompany(VatRegistrationRequest request)
-        {
-            await this.taxuallyHttpClient.PostAsync(this.UkUrl, request);
-        }
+    public async Task RegisterCompany(VatRegistrationRequest request)
+    {
+        await this.taxuallyHttpClient.PostAsync(this.UkUrl, request);
     }
 }
