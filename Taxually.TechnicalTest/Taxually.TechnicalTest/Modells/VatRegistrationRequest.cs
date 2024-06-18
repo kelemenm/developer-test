@@ -1,6 +1,6 @@
 ﻿namespace Taxually.TechnicalTest
 {
-    public class VatRegistrationRequest
+    public sealed record VatRegistrationRequest
     {
         public string CompanyName { get; set; }
         public string CompanyId { get; set; }
