@@ -2,9 +2,12 @@
 {
     public class CompanyApiRegistrationService : ICompanyApiRegistrationService
     {
-        public Task RegisterCompany()
+        private const string UkUrl = "https://api.uktax.gov.uk";
+
+        public async Task RegisterCompany(VatRegistrationRequest request)
         {
-            throw new NotImplementedException();
+            var httpClient = new TaxuallyHttpClient();
+            await httpClient.PostAsync(UkUrl, request);
         }
     }
 }
