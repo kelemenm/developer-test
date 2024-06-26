@@ -62,8 +62,8 @@ public class CompanyVatRegistrationServiceTests
 
     private void ValidateRegistrationServices(Times apiTimes, Times csvTimes, Times xmlTimes)
     {
-        apiRegistrationService.Verify(x => x.RegisterCompany(It.IsAny<VatRegistrationRequest>()), apiTimes);
-        csvRegistrationService.Verify(x => x.RegisterCompany(It.IsAny<VatRegistrationRequest>()), csvTimes);
-        xmlRegistrationService.Verify(x => x.RegisterCompany(It.IsAny<VatRegistrationRequest>()), xmlTimes);
+        apiRegistrationService.Verify(x => x.RegisterCompanyAsync(It.IsAny<VatRegistrationRequest>()), apiTimes);
+        csvRegistrationService.Verify(x => x.RegisterCompanyAsync(It.IsAny<VatRegistrationRequest>()), csvTimes);
+        xmlRegistrationService.Verify(x => x.RegisterCompanyAsync(It.IsAny<VatRegistrationRequest>()), xmlTimes);
     }
 }

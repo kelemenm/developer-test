@@ -27,7 +27,7 @@ public class CompanyApiRegistrationServiceTests
     {
         var request = Factory.CreateVatRegistrationRequest();
 
-        await companyApiRegistrationService.RegisterCompany(request);
+        await companyApiRegistrationService.RegisterCompanyAsync(request);
 
         taxuallyHttpClient.Verify(x => x.PostAsync(TestUrl, request), Times.Once);
     }

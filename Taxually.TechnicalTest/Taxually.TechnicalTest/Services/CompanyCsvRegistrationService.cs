@@ -9,7 +9,7 @@ public class CompanyCsvRegistrationService : ICompanyCsvRegistrationService
         this.taxuallyQueueClient = taxuallyQueueClient;
     }
 
-    public async Task RegisterCompany(VatRegistrationRequest request)
+    public async Task RegisterCompanyAsync(VatRegistrationRequest request)
     {
         var csvBuilder = new StringBuilder();
         csvBuilder.AppendLine("CompanyName,CompanyId");

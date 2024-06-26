@@ -2,5 +2,5 @@
 
 public interface IBaseCompanyRegistrationService
 {
-    Task RegisterCompany(VatRegistrationRequest request);
+    Task RegisterCompanyAsync(VatRegistrationRequest request);
 }

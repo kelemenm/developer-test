@@ -22,13 +22,13 @@ public class CompanyVatRegistrationService : ICompanyVatRegistrationService
         {
             case "GB":
                 // UK has an API to register for a VAT number
-                await this.apiRegistrationService.RegisterCompany(request);
+                await this.apiRegistrationService.RegisterCompanyAsync(request);
                 break;
             case "FR":
-                await this.csvRegistration.RegisterCompany(request);
+                await this.csvRegistration.RegisterCompanyAsync(request);
                 break;
             case "DE":
-                await this.xmlRegistrationService.RegisterCompany(request);
+                await this.xmlRegistrationService.RegisterCompanyAsync(request);
                 break;
             default:
                 throw new Exception("Country not supported");

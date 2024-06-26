@@ -15,7 +15,7 @@ public class CompanyXmlRegistrationServiceTests
     {
         var requst = Factory.CreateVatRegistrationRequest();
 
-        await companyXmlRegistrationService.RegisterCompany(requst);
+        await companyXmlRegistrationService.RegisterCompanyAsync(requst);
 
         taxuallyQueueClient.Verify(x => x.EnqueueAsync(Constants.XmlQueueName, It.IsAny<string>()), Times.Once);
     }

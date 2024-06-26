@@ -15,7 +15,7 @@ public class CompanyCsvRegistrationServiceTests
     {
         var request = Factory.CreateVatRegistrationRequest();
 
-        await companyCsvRegistrationService.RegisterCompany(request);
+        await companyCsvRegistrationService.RegisterCompanyAsync(request);
 
         taxuallyQueueClient.Verify(x => x.EnqueueAsync(Constants.CsvQueueName, It.IsAny<byte[]>()), Times.Once);
     }

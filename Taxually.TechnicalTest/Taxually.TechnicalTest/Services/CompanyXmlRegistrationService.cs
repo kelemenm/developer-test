@@ -9,7 +9,7 @@ public class CompanyXmlRegistrationService : ICompanyXmlRegistrationService
         this.taxuallyQueueClient = taxuallyQueueClient;
     }
 
-    public async Task RegisterCompany(VatRegistrationRequest request)
+    public async Task RegisterCompanyAsync(VatRegistrationRequest request)
     {
         using var stringwriter = new StringWriter();
         var serializer = new XmlSerializer(typeof(VatRegistrationRequest));

@@ -15,7 +15,7 @@ public class CompanyApiRegistrationService : ICompanyApiRegistrationService
         this.UkUrl = configuration.GetValue<string>("UkUrl");
     }
 
-    public async Task RegisterCompany(VatRegistrationRequest request)
+    public async Task RegisterCompanyAsync(VatRegistrationRequest request)
     {
         await this.taxuallyHttpClient.PostAsync(this.UkUrl, request);
     }
