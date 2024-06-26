@@ -1,4 +1,4 @@
-﻿namespace Taxually.TechnicalTest.Modells;
+﻿namespace Taxually.TechnicalTest.Models;
 
 public sealed record VatRegistrationRequest
 {

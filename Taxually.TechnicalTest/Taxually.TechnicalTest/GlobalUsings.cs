@@ -3,5 +3,5 @@ global using System.Text;
 global using System.Xml.Serialization;
 global using Taxually.TechnicalTest;
 global using Taxually.TechnicalTest.Interfaces;
-global using Taxually.TechnicalTest.Modells;
+global using Taxually.TechnicalTest.Models;
 global using Taxually.TechnicalTest.Services;
