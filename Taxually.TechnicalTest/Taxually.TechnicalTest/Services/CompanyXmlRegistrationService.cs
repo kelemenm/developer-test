@@ -16,6 +16,6 @@ public class CompanyXmlRegistrationService : ICompanyXmlRegistrationService
         serializer.Serialize(stringwriter, this);
         var xml = stringwriter.ToString();
         
-        await this.taxuallyQueueClient.EnqueueAsync("vat-registration-xml", xml);
+        await this.taxuallyQueueClient.EnqueueAsync(Constants.XmlQueueName, xml);
     }
 }

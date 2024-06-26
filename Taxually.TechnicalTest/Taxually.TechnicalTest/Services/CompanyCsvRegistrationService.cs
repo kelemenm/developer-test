@@ -16,6 +16,6 @@ public class CompanyCsvRegistrationService : ICompanyCsvRegistrationService
         csvBuilder.AppendLine($"{request.CompanyName}{request.CompanyId}");
         var csv = Encoding.UTF8.GetBytes(csvBuilder.ToString());
 
-        await this.taxuallyQueueClient.EnqueueAsync("vat-registration-csv", csv);
+        await this.taxuallyQueueClient.EnqueueAsync(Constants.CsvQueueName, csv);
     }
 }
