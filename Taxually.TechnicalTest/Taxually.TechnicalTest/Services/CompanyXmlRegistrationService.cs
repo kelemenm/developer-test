@@ -13,7 +13,7 @@ public class CompanyXmlRegistrationService : ICompanyXmlRegistrationService
     {
         using var stringwriter = new StringWriter();
         var serializer = new XmlSerializer(typeof(VatRegistrationRequest));
-        serializer.Serialize(stringwriter, this);
+        serializer.Serialize(stringwriter, request);
         var xml = stringwriter.ToString();
         
         await this.taxuallyQueueClient.EnqueueAsync(Constants.XmlQueueName, xml);
